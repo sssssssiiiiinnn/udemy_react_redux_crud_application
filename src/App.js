@@ -1,21 +1,5 @@
 import React from "react";
-
-// function App() {
-//   return (
-//     <React.Fragment>
-//       <label htmlFor="bar">bar</label>
-//       <input
-//         type="text"
-//         onClick={() => {
-//           console.log("asdfa");
-//         }}
-//         onChange={(event) => {
-//           console.log(event.target);
-//         }}
-//       />
-//     </React.Fragment>
-//   );
-// }
+import PropTypes from "prop-types";
 
 const App = () => {
   const profiles = [
@@ -41,9 +25,9 @@ const User = (props) => {
   );
 };
 
-User.defaultProps = {
-  age: 1,
-  name: "John Doe",
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
 };
 
 export default App;
